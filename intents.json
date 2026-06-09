@@ -1,0 +1,19 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hi", "hello", "hey"],
+      "responses": ["Hello!", "Hi there!", "Welcome!"]
+    },
+    {
+      "tag": "college",
+      "patterns": ["college", "course", "btech"],
+      "responses": ["I can help with B.Tech-related questions."]
+    },
+    {
+      "tag": "bye",
+      "patterns": ["bye", "goodbye"],
+      "responses": ["Goodbye!", "Have a great day!"]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Chatbot</title>
+</head>
+<body>
+
+<h2>AI Chatbot</h2>
+
+<input type="text" id="userInput" placeholder="Type your message">
+<button onclick="sendMessage()">Send</button>
+
+<p id="response">Bot: Welcome! 👋</p>
+
+<script>
+function sendMessage() {
+
+    let msg = document.getElementById("userInput").value;
+
+    fetch("/get?msg=" + encodeURIComponent(msg))
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("response").innerHTML =
+        "Bot: " + data;
+    });
+}
+</script>
+
+</body>
+</html>
